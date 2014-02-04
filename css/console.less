@@ -1,0 +1,86 @@
+@exo: "Exo 2";
+@link: #63b474;
+
+body {
+	font-size: 10px;
+	font-family: @exo;
+}
+
+header {
+	
+	.navbar {
+		min-height: 45px;
+		
+		&.utility {
+			background-color: @link;
+			border-radius: 0;
+			border: 0;
+			
+			h1 {
+				font-size: 20px;
+				margin: 0;
+				line-height: 45px;
+				
+				a {
+					color: #fff;
+					
+					&:hover {
+						text-decoration: none;
+					}
+				}	
+			}
+			
+			.nav .open > a,
+			.nav .open > a:hover,
+			.nav .open > a:focus {
+				background-color: #51a362;
+			}
+			
+			.dropdown-toggle {
+				font-size: 13px;
+				line-height: 45px;
+				padding: 0 15px;
+				color: #fff;
+				
+				&:hover,
+				&:focus {
+					background-color: #51a362;
+				}
+				
+				span {
+					text-indent: -9999999px;
+					display: inline-block;
+				}
+			}
+			
+			.dropdown-menu {
+				left: auto;
+				right: 0;
+				border-color: #B6B6B6;
+			    border-radius: 0;
+			    border-top-width: 0;
+			    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+			    font-size: 12px;
+			    margin-top: 0;
+			    
+			    li.separator {
+				    border-top: 1px solid #E5E5E5;
+				    display: block;
+				    margin-top: 4px;
+				    padding-top: 4px;
+			    }
+			    
+			    li > a {
+				    line-height: 25px;
+					padding: 0 10px;
+					
+					&:hover {
+						background-color: @link;
+						color: #FFFFFF;
+					}
+			    }
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,66 @@
+body {
+  font-size: 10px;
+  font-family: "Exo 2";
+}
+header .navbar {
+  min-height: 45px;
+}
+header .navbar.utility {
+  background-color: #63b474;
+  border-radius: 0;
+  border: 0;
+}
+header .navbar.utility h1 {
+  font-size: 20px;
+  margin: 0;
+  line-height: 45px;
+}
+header .navbar.utility h1 a {
+  color: #fff;
+}
+header .navbar.utility h1 a:hover {
+  text-decoration: none;
+}
+header .navbar.utility .nav .open > a,
+header .navbar.utility .nav .open > a:hover,
+header .navbar.utility .nav .open > a:focus {
+  background-color: #51a362;
+}
+header .navbar.utility .dropdown-toggle {
+  font-size: 13px;
+  line-height: 45px;
+  padding: 0 15px;
+  color: #fff;
+}
+header .navbar.utility .dropdown-toggle:hover,
+header .navbar.utility .dropdown-toggle:focus {
+  background-color: #51a362;
+}
+header .navbar.utility .dropdown-toggle span {
+  text-indent: -9999999px;
+  display: inline-block;
+}
+header .navbar.utility .dropdown-menu {
+  left: auto;
+  right: 0;
+  border-color: #B6B6B6;
+  border-radius: 0;
+  border-top-width: 0;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  margin-top: 0;
+}
+header .navbar.utility .dropdown-menu li.separator {
+  border-top: 1px solid #E5E5E5;
+  display: block;
+  margin-top: 4px;
+  padding-top: 4px;
+}
+header .navbar.utility .dropdown-menu li > a {
+  line-height: 25px;
+  padding: 0 10px;
+}
+header .navbar.utility .dropdown-menu li > a:hover {
+  background-color: #63b474;
+  color: #FFFFFF;
+}
