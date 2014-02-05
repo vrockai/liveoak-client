@@ -17,7 +17,7 @@
 		            <h1 class="pull-left"><a href="index.html">LiveOak</a></h1>
 		            <ul class="nav pull-right">
 		                <li class="dropdown">
-		                    <a data-toggle="dropdown" class="dropdown-toggle ng-binding" href="#">
+		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 		                    	<span class="icon-user">Icon: user</span> Admin<i class="caret"></i></a>
 		                    <ul class="dropdown-menu">
 		                        <li><a href="#">Manage Account</a></li>
@@ -30,15 +30,17 @@
 		    <div class="navbar primary">
 		        <div class="navbar-inner clearfix container">
 		            <div class="nav pull-left">
-		            	<span class="dropdown-label">Application:</span>
-			            <div class="select-rcue">
-		                	<select>
-		                  		<option value="0" selected="selected">MyApp</option>
-						  	</select>
-						</div>
+		            	<li class="dropdown">
+		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<i class="caret"></i></a>
+		                    <ul class="dropdown-menu">
+		                        <li class="active"><a href="#">MyApp</a></li>
+		                        <li><a href="#">OtherApp</a></li>
+		                    </ul>
+		                </li>
+
 					</div>
 		            <div class="pull-right">
-		                <a href="#" class="button primary">New App</a>
+		                <a href="#" class="btn btn-primary">New App</a>
 		            </div>
 		        </div>
 		    </div>
