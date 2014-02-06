@@ -8,17 +8,18 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/console.css">
 		<link href='http://fonts.googleapis.com/css?family=Exo+2:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	</head>
 	
 	<body class="app-dashboard">
 		<header class="header rcue">
 		    <div class="navbar utility">
-		        <div class="navbar-inner clearfix container">
+		        <div class="navbar-inner clearfix">
 		            <h1 class="pull-left"><a href="index.html">LiveOak</a></h1>
 		            <ul class="nav pull-right">
 		                <li class="dropdown">
 		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-		                    	<span class="icon-user">Icon: user</span> Admin<i class="caret"></i></a>
+		                    	<span class="icon-user">Icon: user</span> Admin<b class="caret"></b></a>
 		                    <ul class="dropdown-menu">
 		                        <li><a href="#">Manage Account</a></li>
 		                        <li class="separator"><a href="#">Sign Out</a></li>
@@ -28,10 +29,10 @@
 		        </div>
 		    </div>
 		    <div class="navbar primary">
-		        <div class="navbar-inner clearfix container">
-		            <div class="nav pull-left">
+		        <div class="navbar-inner clearfix">
+		            <div class="nav pull-left col-md-2">
 		            	<li class="dropdown">
-		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<i class="caret"></i></a>
+		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
 		                    <ul class="dropdown-menu">
 		                        <li class="active"><a href="#">MyApp</a></li>
 		                        <li><a href="#">OtherApp</a></li>
@@ -46,18 +47,18 @@
 		    </div>
 		</header>
 		
-		<aside>
-			<div class="bs-sidebar col-md-3 clearfix">
-				<ul>
-					<li class="active dashboard"><a href="#">Dashboard</a></li>
-					<li class="security"><a href="#">Security</a></li>
-					<li class="storage"><a href="#">Storage</a></li>
-					<li class="push"><a href="#">Push</a></li>
-				</ul>
-			</div>
+		<aside class="bs-sidebar col-md-2 clearfix">
+			<ul>
+				<li class="active dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
+				<li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
+				<li class="storage"><a href="#"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
+				<li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
+			</ul>
 		</aside>
 		
-		<div class="content-area col-md-9" >
+		<div class="aside-bg col-md-2"></div>
+		
+		<div class="content-area col-md-10" >
             <div class="content">
                 <ol class="breadcrumb">
 					<li><a href="#">Applications</a></li>
@@ -66,7 +67,7 @@
 				</ol>
 				
 				<section class="box">
-					<div class="box-header">
+					<div class="box-header clearfix">
 						<h2 class="pull-left"><span>MyApp</span> Dashboard</h2>
 						<div class="pull-right">
 							<span class="hidden">Start Date</span>
