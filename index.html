@@ -19,7 +19,8 @@
 		            <ul class="nav pull-right">
 		                <li class="dropdown">
 		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-		                    	<span class="icon-user">Icon: user</span> Admin<b class="caret"></b></a>
+		                    	<i class="fa fa-user"></i>Admin<b class="caret"></b>
+		                    </a>
 		                    <ul class="dropdown-menu">
 		                        <li><a href="#">Manage Account</a></li>
 		                        <li class="separator"><a href="#">Sign Out</a></li>
@@ -30,24 +31,29 @@
 		    </div>
 		    <div class="navbar primary">
 		        <div class="navbar-inner clearfix">
-		            <div class="nav pull-left col-md-2">
-		            	<li class="dropdown">
-		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
-		                    <ul class="dropdown-menu">
-		                        <li class="active"><a href="#">MyApp</a></li>
-		                        <li><a href="#">OtherApp</a></li>
-		                    </ul>
-		                </li>
-
+		            <div class="nav pull-left">
+		            	<li class="active">
+		            		<a href="#">Applications</a>
+		            	</li>
 					</div>
+<!--
 		            <div class="pull-right">
 		                <a href="#" class="btn btn-primary">New App</a>
 		            </div>
+-->
 		        </div>
 		    </div>
 		</header>
 		
 		<aside class="bs-sidebar col-md-2 clearfix">
+		   	<div class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="active"><a href="#">MyApp</a></li>
+                    <li><a href="#">OtherApp</a></li>
+                </ul>
+            </div>
+
 			<ul>
 				<li class="active dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
 				<li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
@@ -58,7 +64,7 @@
 		
 		<div class="aside-bg col-md-2"></div>
 		
-		<div class="content-area col-md-10" >
+		<div class="content-area col-md-8">
             <div class="content">
                 <ol class="breadcrumb">
 					<li><a href="#">Applications</a></li>
@@ -69,32 +75,40 @@
 				<section class="box">
 					<div class="box-header clearfix">
 						<h2 class="pull-left"><span>MyApp</span> Dashboard</h2>
-						<div class="pull-right">
+						<div class="btn-group pull-right">
+						  <button type="button" class="btn btn-default">Hourly</button>
+						  <button type="button" class="btn btn-default">Day</button>
+						  <button type="button" class="btn btn-default active">Week</button>
+						  <button type="button" class="btn btn-default">Month</button>
+						</div>
+						<!--
+<div class="pull-right">
 							<span class="hidden">Start Date</span>
-							<input type="text" id="dpd1" value="" class="span2"> <!-- Componente Bootstrap Date Picker: http://www.eyecon.ro/bootstrap-datepicker/  -->
+							<input type="text" id="dpd1" value="" class="span2">
 							<span class="date-separator"> - </span>
 							<span class="hidden">End Date</span>
 							<input type="text" id="dpd2" value="" class="span2">
 						</div>
+-->
 					</div>
 					<div class="box-content">
 						<div class="api highlight">
-							<span class="icon tiny">Icon: loading</span>
+							<i class="fa fa-refresh fa-5x"></i>
 							<em>127</em>
 							<span class="text">API requests</span>
 						</div>
 						<div class="users">
-							<span class="icon tiny">Icon: user</span>
+							<i class="fa fa-users fa-5x"></i>
 							<em>13</em>
 							<span class="text">active users</span>
 						</div>
 						<div class="push">
-							<span class="icon tiny">Icon: mobile phone</span>
+							<i class="fa fa-mobile fa-5x"></i>
 							<em>39</em>
 							<span class="text">push notifications</span>
 						</div>
 						<div class="storage">
-							<span class="icon tiny">Icon: database</span>
+							<i class="fa fa-cloud fa-5x"></i>
 							<em>1.2 <span>GB</span></em>
 							<span class="text">data storage</span>
 						</div>
@@ -110,7 +124,7 @@
 				
             </div>
             
-            <div class="complementary-info">
+			<div class="content-area col-md-2">
 				<section class="details">
 					<h4><span>MyApp</span> Details </h4>
 					<div class="security">
