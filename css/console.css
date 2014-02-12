@@ -1,36 +1,55 @@
 body {
-  font-size: 10px;
   font-family: "Exo 2", sans-serif;
-  color: #666;
+  color: #666666;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Exo 2", sans-serif;
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span,
+.h1 span,
+.h2 span,
+.h3 span,
+.h4 span,
+.h5 span,
+.h6 span {
+  color: #aaaaaa;
+}
+a {
+  color: #63b474;
+}
+a:hover,
+a:focus {
+  color: #3c8d4d;
 }
 a:focus {
   outline: 0 none;
 }
 .dropdown-menu {
-  border-color: #B6B6B6;
-  border-radius: 0;
   border-top-width: 0;
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
   font-size: 12px;
   margin-top: 0;
   padding: 5px 0 4px;
 }
-.dropdown-menu li {
-  margin-bottom: 1px;
-}
 .dropdown-menu li.separator {
   border-top: 1px solid #E5E5E5;
-  display: block;
   margin-top: 4px;
   padding-top: 4px;
-}
-.dropdown-menu li > a {
-  line-height: 25px;
-  padding: 0 10px;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-  border-style: solid;
-  border-color: transparent;
 }
 .dropdown-menu li > a:hover {
   background-color: #e0f0e3;
@@ -38,16 +57,17 @@ a:focus {
 }
 .dropdown-menu li.active a,
 .dropdown-menu li.active a:hover {
-  background-color: #63b474;
+  background-color: #63b474 !important;
   color: #FFFFFF;
-  border-color: #63b474;
+  border-color: #3c8d4d !important;
+  /* Fix in patternfly */
+
 }
 .btn {
   font-size: 12px;
-  font-weight: bold;
   padding: 6px 15px 6px;
   line-height: 12px;
-  border-radius: 1px;
+  box-shadow: none;
 }
 .btn-primary {
   background-color: #63b474;
@@ -56,6 +76,7 @@ a:focus {
 }
 .btn-default {
   background-color: #FFFFFF;
+  background-image: none;
   border-color: #ddd;
   color: #777;
   font-weight: normal;
@@ -80,11 +101,7 @@ a:focus {
   font-weight: normal;
 }
 .caret {
-  border-left-width: 5px;
-  margin-left: 6px;
-}
-h2 span {
-  color: #aaa;
+  margin-left: 5px;
 }
 .select-rcue {
   background: #ffffff url("img/select-arrow.png") no-repeat right center;
@@ -130,9 +147,6 @@ header .navbar.utility h1 {
 header .navbar.utility h1 a {
   color: #fff;
 }
-header .navbar.utility h1 a:hover {
-  text-decoration: none;
-}
 header .navbar.utility .nav .open > a,
 header .navbar.utility .nav .open > a:hover,
 header .navbar.utility .nav .open > a:focus {
@@ -149,7 +163,7 @@ header .navbar.utility .dropdown-toggle:focus {
   background-color: #51a362;
 }
 header .navbar.utility .dropdown-toggle .fa {
-  margin-right: 5px;
+  margin-right: 7px;
 }
 header .navbar.utility .dropdown-menu {
   left: auto;
@@ -161,7 +175,6 @@ header .navbar.primary {
   border-color: #cdcdc5;
   border-left-width: 0;
   border-right-width: 0;
-  border-radius: 0;
   margin-bottom: 0;
 }
 header .navbar.primary .nav {
@@ -169,7 +182,7 @@ header .navbar.primary .nav {
 }
 header .navbar.primary .nav li a {
   font-size: 14px;
-  color: #666;
+  color: #666666;
   padding: 0 20px;
   line-height: 40px;
   text-align: center;
@@ -193,7 +206,6 @@ header .navbar.primary .btn-primary:focus {
   border-color: #619E6E;
 }
 aside {
-  background-color: #343434;
   /*
 	.dropdown-toggle {
 		font-size: 13px;
@@ -201,7 +213,7 @@ aside {
 		min-width: 150px;
 		padding: 12px 15px 15px 20px;
 		line-height: 13px;
-		color: #666666;
+		color: @dark;
 		background-color: #e1e1e1;
 		border-color: #cdcdc5;
 		border-style: solid;
@@ -237,7 +249,6 @@ aside li a {
   font-size: 14px;
   color: #a2a2a1;
   font-weight: bold;
-  display: block;
 }
 aside li a:hover {
   color: #fff;
@@ -246,11 +257,12 @@ aside li a:hover {
 aside li a .fa {
   display: block;
 }
-.aside-bg {
+.aside-bg,
+.content-area-bg {
   background-color: #343434;
   bottom: 0;
   position: fixed;
-  top: 40px;
+  top: 0;
   z-index: -10;
 }
 .content-area {
@@ -258,15 +270,26 @@ aside li a .fa {
   padding-left: 30px;
   padding-right: 30px;
 }
+.content-area-bg {
+  background-color: #f5f5f5;
+}
+.breadcrumb {
+  margin: 15px 0;
+}
+.breadcrumb > li + li:before {
+  color: #aaaaaa;
+}
+.breadcrumb > .active {
+  color: #666666;
+}
 .box .box-header {
   background-color: #fff;
   margin-bottom: 1px;
   padding: 0 15px;
 }
 .box .box-header h2 {
-  font-size: 24px;
   margin: 0;
-  line-height: 24px;
+  line-height: 23px;
   padding: 7px 0 11px;
 }
 .box .box-header .pull-right {
@@ -278,29 +301,80 @@ aside li a .fa {
 .box .box-content {
   background-color: #fdfdfd;
   width: 100%;
+  padding: 20px 30px 32px;
 }
-.box .box-content div {
+.box .box-content > div {
   width: 33.1%;
   text-align: center;
   display: inline-block;
+  font-size: 0.6em;
+  margin-top: 30px;
 }
-.box .box-content div.highlight {
+.box .box-content > div.highlight {
   width: 100%;
+  margin-top: 0;
+  font-size: 1em;
 }
-.breadcrumb {
-  font-size: 11px;
-  margin: 15px 0;
-  padding-left: 0;
+.box .box-content > div.highlight .text {
+  font-size: 16px;
+  padding-left: 5px;
 }
-.breadcrumb > li + li:before {
-  font-family: FontAwesome;
-  color: #aaa;
-  content: " ";
-  padding: 0 5px;
+.box .box-content > div i {
+  font-size: 11.63636363636364em;
+  margin-right: 0.2734375em;
+  display: inline-block;
 }
-.breadcrumb > .active {
-  color: #666;
+.box .box-content > div div {
+  display: inline-block;
+  text-align: left;
+  vertical-align: bottom;
 }
-.breadcrumb a {
-  color: #63b474;
+.box .box-content > div div em {
+  font-size: 11.63636363636364em;
+  font-weight: 300;
+  line-height: 1em;
+  margin-bottom: -0.078125em;
+}
+.box .box-content > div div .measure {
+  font-size: 2.2em;
+}
+.box .box-content > div div .text {
+  font-size: 13px;
+  color: #aaaaaa;
+  padding-left: 3px;
+  display: block;
+}
+.box .box-content > div.api {
+  color: #69a8cd;
+}
+.box .box-content > div.users {
+  color: #e9b356;
+}
+.box .box-content > div.push {
+  color: #e39090;
+}
+.box .box-content > div.storage {
+  color: #6ab1ad;
+}
+.tutorials {
+  padding: 0 15px;
+}
+.tutorials h3 {
+  margin-top: 28px;
+}
+.tutorials i {
+  float: left;
+  margin-right: 15px;
+  color: #aaaaaa;
+}
+.tutorials p {
+  font-size: 14px;
+  color: #666666;
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+.tutorials a {
+  display: block;
+  font-size: 12px;
 }
