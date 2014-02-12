@@ -7,6 +7,10 @@ body {
 	color: #666;
 }
 
+a:focus {
+	outline: 0 none;
+}
+
 .dropdown-menu {
 	border-color: #B6B6B6;
     border-radius: 0;
@@ -52,8 +56,8 @@ body {
 .btn {
 	font-size: 12px;
 	font-weight: bold;
-	padding: 6px 15px 9px 15px;
-	line-height: 13px;
+	padding: 6px 15px 6px;
+	line-height: 12px;
 	border-radius: 1px;
 }
 
@@ -196,28 +200,31 @@ header {
 		border-radius: 0;
 		margin-bottom: 0;
 		
-		.nav li {
-
-			&.active a {
-				font-weight: bold;
-				padding: 0 20px;
-				line-height: 40px;
-				background-color: #dedcdc;
-				border-top: 1px solid #b5b5ae;
-				margin-top: -1px;
-			}			
-			
-			a {
-				font-size: 14px;
-				color: #666;
-				
-				&:hover {
-					background-color: #dedcdc;
-				}
-			}
-			
-		}
+		.nav {
+			padding-right: 0;
+		 
+			li {
 		
+				a {
+					font-size: 14px;
+					color: #666;
+					padding: 0 20px;
+					line-height: 40px;	
+					text-align: center;
+								
+					&:hover {
+						background-color: #dedcdc;
+					}
+				}
+	
+				&.active a {
+					font-weight: bold;
+					background-color: #dedcdc;
+					border-top: 1px solid #b5b5ae;
+					margin-top: -1px;
+				}			
+			}
+		}
 						
 		.btn-primary {
 			margin-top: 5px;
@@ -311,7 +318,6 @@ aside {
 .box {
 	.box-header {
 		background-color: #fff;
-		border-radius: 5px 5px 0 0;
 		margin-bottom: 1px;
 		padding: 0 15px;
 		
@@ -323,7 +329,7 @@ aside {
 		}
 		
 		.pull-right {
-			padding-top: 7px;
+			padding-top: 8px;
 			
 			.interval {
 				display: none;
@@ -333,7 +339,17 @@ aside {
 	
 	.box-content {
 		background-color: #fdfdfd;
-		border-radius: 0 0 5px 5px;
+		width: 100%;
+		
+		div {
+			width: 33.1%;
+			text-align: center;
+			display: inline-block;
+			
+			&.highlight {
+				width: 100%;
+			}
+		}
 	}
 }
 

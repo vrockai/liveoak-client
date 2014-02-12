@@ -3,6 +3,9 @@ body {
   font-family: "Exo 2", sans-serif;
   color: #666;
 }
+a:focus {
+  outline: 0 none;
+}
 .dropdown-menu {
   border-color: #B6B6B6;
   border-radius: 0;
@@ -42,8 +45,8 @@ body {
 .btn {
   font-size: 12px;
   font-weight: bold;
-  padding: 6px 15px 9px 15px;
-  line-height: 13px;
+  padding: 6px 15px 6px;
+  line-height: 12px;
   border-radius: 1px;
 }
 .btn-primary {
@@ -161,20 +164,24 @@ header .navbar.primary {
   border-radius: 0;
   margin-bottom: 0;
 }
-header .navbar.primary .nav li.active a {
-  font-weight: bold;
-  padding: 0 20px;
-  line-height: 40px;
-  background-color: #dedcdc;
-  border-top: 1px solid #b5b5ae;
-  margin-top: -1px;
+header .navbar.primary .nav {
+  padding-right: 0;
 }
 header .navbar.primary .nav li a {
   font-size: 14px;
   color: #666;
+  padding: 0 20px;
+  line-height: 40px;
+  text-align: center;
 }
 header .navbar.primary .nav li a:hover {
   background-color: #dedcdc;
+}
+header .navbar.primary .nav li.active a {
+  font-weight: bold;
+  background-color: #dedcdc;
+  border-top: 1px solid #b5b5ae;
+  margin-top: -1px;
 }
 header .navbar.primary .btn-primary {
   margin-top: 5px;
@@ -253,7 +260,6 @@ aside li a .fa {
 }
 .box .box-header {
   background-color: #fff;
-  border-radius: 5px 5px 0 0;
   margin-bottom: 1px;
   padding: 0 15px;
 }
@@ -264,14 +270,22 @@ aside li a .fa {
   padding: 7px 0 11px;
 }
 .box .box-header .pull-right {
-  padding-top: 7px;
+  padding-top: 8px;
 }
 .box .box-header .pull-right .interval {
   display: none;
 }
 .box .box-content {
   background-color: #fdfdfd;
-  border-radius: 0 0 5px 5px;
+  width: 100%;
+}
+.box .box-content div {
+  width: 33.1%;
+  text-align: center;
+  display: inline-block;
+}
+.box .box-content div.highlight {
+  width: 100%;
 }
 .breadcrumb {
   font-size: 11px;
