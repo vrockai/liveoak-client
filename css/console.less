@@ -35,6 +35,8 @@ a {
     font-size: 12px;
     margin-top: 0;
     padding: 5px 0 4px;
+    
+    li + li {margin-top: 1px;}
         
     li.separator {
 	    border-top: 1px solid #E5E5E5;
@@ -97,6 +99,18 @@ a {
 .btn-default:active {
 	font-weight: normal;
 } 
+
+button.icon {
+	padding: 0;
+	background-image: 0;
+	border: none;
+	background-color: transparent;
+	
+	span {
+		text-indent: -999999px;
+		display: inline-block;
+	}
+}
 
 
 .caret {
@@ -229,44 +243,56 @@ header {
 	}		
 }
 
+aside.col-md-2 {
+	padding: 0;
+}
+
 aside {
 	
-/*
+	.dropdown {
+		margin-top: 10px;
+	}
+	
 	.dropdown-toggle {
+		display: block;
 		font-size: 13px;
+		line-height: 1em;
 		font-weight: bold;
-		min-width: 150px;
-		padding: 12px 15px 15px 20px;
-		line-height: 13px;
-		color: @dark;
-		background-color: #e1e1e1;
-		border-color: #cdcdc5;
+		padding: 10px 10px 12px 20px;
+		color: @gray;
+		background-color: #404040;
+		border-color: #525252;
 		border-style: solid;
-		border-left-width: 1px;
-		border-right-width: 1px;
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+		text-align: center;
 		
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: #d8d8d8;
+			background-color: #464646;
+			text-decoration: none;
 		}
 		
 		.caret {
 			float: right;
-			margin-top: 7px;
+			margin-top: 3px;
 		}
 	}
-*/
 	
 	.dropdown-menu {
 		margin-top: 1px;
 		width: 100%;
+		text-align: center;
 	}
 
-	
-	li {
+	.side-nav li {
 		text-align: center;
-		margin-top: 40px;
+		margin-top: 36px;
+		
+		&:first-child {
+			margin-top: 32px;
+		}
 		
 		&.active a {
 			color: #fff;
@@ -277,7 +303,8 @@ aside {
 			color: #a2a2a1;
 			font-weight: bold;
 			
-			&:hover {
+			&:hover,
+			&:focus {
 				color: #fff;
 				text-decoration: none;
 			}
@@ -309,7 +336,7 @@ aside {
 }
 
 .breadcrumb {
-    margin: 15px 0;
+    margin: 9px 0;
     
     > li + li:before {
 	    color: @gray;
@@ -344,19 +371,22 @@ aside {
 	.box-content {
 		background-color: #fdfdfd;
 		width: 100%;
-		padding: 20px 30px 32px;
+		padding: 36px 30px 32px;
 		
 		> div {
-			width: 33.1%;
+			width: 33.333333%;
 			text-align: center;
-			display: inline-block;
+			float: left;
 			font-size: 0.6em;
 			margin-top: 30px;
+			display: table;
+			
 			
 			&.highlight {
 				width: 100%;
 				margin-top: 0;
 				font-size: 1em;
+				float: none;
 				
 				.text {
 					font-size: 16px;
@@ -365,25 +395,28 @@ aside {
 			}
 			
 			i {
-				font-size: 11.63636363636364em;
-				margin-right: 0.2734375em;
-				display: inline-block;
+				font-size: 10.54545454545455em;
+				padding-right: 0.2734375em;
+				display: table-cell;
+				text-align: right;
+				vertical-align: middle;
 			}
 			
 			div {
-				display: inline-block;
 				text-align: left;
 				vertical-align: bottom;
+				display: table-cell;
 				
 				em {
 					font-size: 11.63636363636364em;
 					font-weight: 300;
-					line-height: 1em;
+					line-height: 0.6em;
 					margin-bottom: -0.078125em;
 				}
 				
 				.measure {
-					font-size: 2.2em;
+					font-size: 2.5em;
+					line-height: 0.5em;
 				}
 				
 				.text {
@@ -400,14 +433,27 @@ aside {
 			
 			&.users {
 				color: #e9b356;
+				
+				i {
+					font-size: 9.84848484848485em;
+				}
 			}
 			
 			&.push {
 				color: #e39090;
+				
+				i {
+					padding-right: 0.24691358024691em;
+					padding-left: 0.24691358024691em;
+				}
 			}
 			
 			&.storage {
 				color: #6ab1ad;
+				
+				i {
+					padding-right: 0.23188405797101em;
+				}
 			}
 
 		}
@@ -439,4 +485,64 @@ aside {
 		display: block;
 		font-size: 12px;
 	}
+}
+
+.info-area {
+
+	padding: 0 20px;
+	
+	h3 {
+		margin-top: 30px;
+		margin-bottom: 22px;
+	}
+	
+	.details > div {
+		margin-bottom: 25px;
+		
+		div {
+			margin-top: 8px;
+			font-size: 12px;
+			
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		
+		.label {
+			color: @gray;
+			font-weight: normal;
+			padding: 0;
+			display: block;
+			text-align: left;
+		}
+		
+		.field {
+			display: inline-block;
+			margin-top: 2px;
+		}
+		
+		.field + button {
+			padding-left: 5px;
+		}
+		
+		.circle {
+			border-radius: 50%;
+			width: 7px;
+			height: 7px; 
+			background-color: @link;
+			display: inline-block;
+		}
+		
+		> a {
+			display: inline-block;
+			margin-top: 6px;
+		}
+		
+		ul {
+			margin-top: 2px;
+			margin-bottom: 0;
+		}
+		
+	}
+	
 }
