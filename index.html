@@ -10,70 +10,86 @@
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	</head>
 
-    <script>
-        /*
-         * Keyboard shortcut for style toggle is the "\" key
-         */
+	<script>
+		/*
+		 * Keyboard shortcut for style toggle is the "\" key
+		 */
 
-        // Change this var whenever you add new custom css file
-        var myStyleFiles = ["console.css"]
+		// Change this var whenever you add new custom css file
+		var myStyleFiles = ["console.css"]
 
-        //JS magic for turning our custom styles on/off
-        var myStyles = [];
-        for (var i=0; i<document.styleSheets.length; i++){
-            var style = document.styleSheets[i];
-            var styleHref = style.href;
-            var styleHrefArray = styleHref.split('/');
-            var styleName = styleHrefArray[styleHrefArray.length-1];
+		//JS magic for turning our custom styles on/off
+		var myStyles = [];
+		for (var i=0; i<document.styleSheets.length; i++){
+			var style = document.styleSheets[i];
+			var styleHref = style.href;
+			var styleHrefArray = styleHref.split('/');
+			var styleName = styleHrefArray[styleHrefArray.length-1];
 
-            if (myStyleFiles.indexOf(styleName) > -1){
-                myStyles.push(style);
-            }
-        }
+			if (myStyleFiles.indexOf(styleName) > -1){
+				myStyles.push(style);
+			}
+		}
 
-        document.onkeyup=function(e){
-            if (e.keyCode == 220){
-                for (var i = 0; i < myStyles.length; i++){
-                    var style = myStyles[i];
-                    var status = style.disabled;
-                    if (status){
-                        style.disabled = !status;
-                    } else {
-                        style.disabled = true;
-                    }
-                }
-            }
-        };
-    </script>
-	
-	<body class="app-dashboard">
-		<header class="header rcue">
-		    <div class="navbar utility">
-		        <div class="navbar-inner clearfix">
-		            <h1 class="pull-left"><a href="index.html">LiveOak</a></h1>
-		            <ul class="nav pull-right">
-		                <li class="dropdown">
-		                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-		                    	<i class="fa fa-user"></i>Admin<b class="caret"></b>
-		                    </a>
-		                    <ul class="dropdown-menu">
-		                        <li><a href="#">Manage Account</a></li>
-		                        <li class="separator"><a href="#">Sign Out</a></li>
-		                    </ul>
-		                </li>
-		            </ul>
-		        </div>
-		    </div>
-		    <div class="navbar primary">
-	            <ul class="nav col-md-2">
-	            	<li class="active">
-	            		<a href="#">Applications</a>
-	            	</li>
-		        </ul>
-		    </div>
-		</header>
-		
-		<aside class="bs-sidebar col-md-2 clearfix">
+		document.onkeyup=function(e){
+			if (e.keyCode == 220){
+				for (var i = 0; i < myStyles.length; i++){
+					var style = myStyles[i];
+					var status = style.disabled;
+					if (status){
+						style.disabled = !status;
+					} else {
+						style.disabled = true;
+					}
+				}
+			}
+		};
+	</script>
+
+    <body class="app-dashboard">
+
+        <header>
+        <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="../dist/img/brand.svg" alt="PatternFly" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-utility">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="pficon pficon-user"></span>
+                            Brian Johnson <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Manage Account</a>
+                            </li>
+                            <li class="separator">
+                                <a href="#">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="navbar primary">
+            <ul class="nav col-md-2">
+                <li class="active">
+                    <a href="#">Applications</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+		<aside class="bs-sidebar col-md-2">
 		   	<div class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -88,18 +104,19 @@
 				<li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
 			</ul>
 		</aside>
-		
+
 		<div class="aside-bg col-md-2"></div>
-		
-		<div>
-			<div class="content-area col-md-8">
+
+		<div class="bs-sidebar col-md-10">
+            <div class="row">
+			<div class="content-area col-md-10">
 	            <div class="content">
 	                <ol class="breadcrumb">
 						<li><a href="#">Applications</a></li>
 						<li><a href="#">MyApp</a></li>
 						<li class="active">Dashboard</li>
 					</ol>
-					
+
 					<section class="box">
 						<div class="box-header clearfix">
 							<h2 class="pull-left"><span>MyApp</span> Dashboard</h2>
@@ -109,39 +126,30 @@
 							  <button type="button" class="btn btn-default active">Week</button>
 							  <button type="button" class="btn btn-default">Month</button>
 							</div>
-							<!--
-	<div class="pull-right">
-								<span class="hidden">Start Date</span>
-								<input type="text" id="dpd1" value="" class="span2">
-								<span class="date-separator"> - </span>
-								<span class="hidden">End Date</span>
-								<input type="text" id="dpd2" value="" class="span2">
-							</div>
-	-->
 						</div>
 						<div class="box-content clearfix">
-							<div class="api highlight">
+							<div class="api highlight col-sm-12">
 								<i class="fa fa-refresh"></i>
 								<div>
 									<em>127</em>
 									<span class="text">API requests / second</span>
 								</div>
 							</div>
-							<div class="users">
+							<div class="users col-sm-4">
 								<i class="fa fa-users"></i>
 								<div>
 									<em>13</em>
 									<span class="text">active users / second</span>
 								</div>
 							</div>
-							<div class="push">
+							<div class="push col-sm-4">
 								<i class="fa fa-mobile"></i>
 								<div>
 									<em>39</em>
 									<span class="text">push notification / s</span>
 								</div>
 							</div>
-							<div class="storage">
+							<div class="storage col-sm-4">
 								<i class="fa fa-cloud"></i>
 								<div>
 									<em>1.2</em>
@@ -150,8 +158,8 @@
 								</div>
 							</div>
 						</div>
-					</section>	
-					
+					</section>
+
 					<section class="tutorials">
 						<h3><span>LiveOak</span> Tutorials</h3>
 						<i class="fa fa-file-text-o fa-4x"></i>
@@ -159,27 +167,25 @@
 						<a href="#">How to start building your app »</a>
 					</section>
 	            </div>
-			</div>     
-			<div class="content-area-bg col-md-8 col-md-offset-2"></div>
-			
-			       
+			</div>
+			<!--div class="content-area-bg col-md-8 col-md-offset-2"></div-->
 			<div class="info-area col-md-2">
 				<section class="details">
 					<h3><span>MyApp</span> Details</h3>
 					<div class="security">
 						<div>
-							<span class="label">App Status</span>
+							<span class="control-label">App Status</span>
 							<span class="field"><i class="circle"></i> Running</span>
 						</div>
 						<div>
 							<span class="label">App Key</span>
 							<span class="field">jieu89-eiW38oskj</span>
-							<button class="icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                            <span class="pficon pficon-export" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy">Copy</span>
 						</div>
 						<div>
 							<span class="label">App Secret</span>
 							<span class="field">9iugjW39vnlz90ei9ejiDoi</span>
-							<button class="icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                            <span class="pficon pficon-export" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy">Copy</span>
 						</div>
 						<a href="#">View <strong>Security Settings</strong></a>
 					</div>
@@ -201,10 +207,11 @@
 						</div>
 						<a href="#">View <strong>Push Settings</strong></a>
 					</div>
-				</section>            
+				</section>
 	        </div>
+            </div>
 		</div>
-                    
+
 		<script src="https://code.jquery.com/jquery.js"></script>
 	    <script src="js/bootstrap.min.js"></script>
 		<script>$('body').tooltip({selector: "[data-toggle=tooltip]",container: "body"});</script>	</body>

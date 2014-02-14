@@ -44,7 +44,7 @@ a:focus {
   border-top-width: 0;
   font-size: 12px;
   margin-top: 0;
-  padding: 5px 0 4px;
+  padding: 50px 0 4px;
 }
 .dropdown-menu li + li {
   margin-top: 1px;
@@ -61,10 +61,10 @@ a:focus {
 .dropdown-menu li.active a,
 .dropdown-menu li.active a:hover {
   background-color: #63b474 !important;
+  /* Fix in patternfly */
   color: #FFFFFF;
   border-color: #3c8d4d !important;
   /* Fix in patternfly */
-
 }
 .btn {
   font-size: 12px;
@@ -144,7 +144,7 @@ button.icon span {
   line-height: 2em;
   padding: 0.363636em 0.909091em;
 }
-header .navbar.utility {
+header .navbar.navbar-pf {
   background-color: #63b474;
   border-radius: 0;
   border: 0;
@@ -152,33 +152,36 @@ header .navbar.utility {
   min-height: 36px;
   padding: 0 20px;
 }
-header .navbar.utility h1 {
+header .navbar.navbar-pf .navbar-header {
+  border: none;
+}
+header .navbar.navbar-pf h1 {
   font-size: 18px;
   margin: 0;
   line-height: 36px;
 }
-header .navbar.utility h1 a {
+header .navbar.navbar-pf h1 a {
   color: #fff;
 }
-header .navbar.utility .nav .open > a,
-header .navbar.utility .nav .open > a:hover,
-header .navbar.utility .nav .open > a:focus {
+header .navbar.navbar-pf .nav .open > a,
+header .navbar.navbar-pf .nav .open > a:hover,
+header .navbar.navbar-pf .nav .open > a:focus {
   background-color: #51a362;
 }
-header .navbar.utility .dropdown-toggle {
+header .navbar.navbar-pf .dropdown-toggle {
   font-size: 13px;
   line-height: 36px;
   padding: 0 15px;
   color: #fff;
 }
-header .navbar.utility .dropdown-toggle:hover,
-header .navbar.utility .dropdown-toggle:focus {
+header .navbar.navbar-pf .dropdown-toggle:hover,
+header .navbar.navbar-pf .dropdown-toggle:focus {
   background-color: #51a362;
 }
-header .navbar.utility .dropdown-toggle .fa {
+header .navbar.navbar-pf .dropdown-toggle .fa {
   margin-right: 7px;
 }
-header .navbar.utility .dropdown-menu {
+header .navbar.navbar-pf .dropdown-menu {
   left: auto;
   right: 0;
 }
