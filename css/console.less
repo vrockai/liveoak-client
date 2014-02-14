@@ -105,10 +105,24 @@ button.icon {
 	background-image: 0;
 	border: none;
 	background-color: transparent;
+	line-height: 1em;
 	
 	span {
 		text-indent: -999999px;
 		display: inline-block;
+	}
+	
+	i {
+		color: @link;
+	}
+	
+	&:hover i {
+		color: @link-darker;
+	}
+	
+	&:active i {
+		color: @dark;
+		text-shadow: 0 0 10px rgba(0,0,0,0.3);
 	}
 }
 
@@ -247,6 +261,9 @@ aside.col-md-2 {
 	padding: 0;
 }
 
+.col-md-2.fixed {
+}
+
 aside {
 	
 	.dropdown {
@@ -294,6 +311,10 @@ aside {
 			margin-top: 32px;
 		}
 		
+		&.active {
+			background: url(img/sidebar-active.svg) no-repeat right 14px;
+		}
+		
 		&.active a {
 			color: #fff;
 		}
@@ -326,7 +347,6 @@ aside {
 }
 
 .content-area {
-	background-color: #f5f5f5;
 	padding-left: 30px;
     padding-right: 30px;
 }
@@ -476,13 +496,11 @@ aside {
 	p {
 		font-size: 14px;
 		color: @dark;
-		display: inline-block;
 		margin-bottom: 0;
 		line-height: 1.5em;
 	}
 	
 	a {
-		display: block;
 		font-size: 12px;
 	}
 }

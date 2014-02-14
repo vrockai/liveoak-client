@@ -108,10 +108,21 @@ button.icon {
   background-image: 0;
   border: none;
   background-color: transparent;
+  line-height: 1em;
 }
 button.icon span {
   text-indent: -999999px;
   display: inline-block;
+}
+button.icon i {
+  color: #63b474;
+}
+button.icon:hover i {
+  color: #3c8d4d;
+}
+button.icon:active i {
+  color: #666666;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .caret {
   margin-left: 5px;
@@ -260,6 +271,9 @@ aside .side-nav li {
 aside .side-nav li:first-child {
   margin-top: 32px;
 }
+aside .side-nav li.active {
+  background: url(img/sidebar-active.svg) no-repeat right 14px;
+}
 aside .side-nav li.active a {
   color: #fff;
 }
@@ -285,7 +299,6 @@ aside .side-nav li a .fa {
   z-index: -10;
 }
 .content-area {
-  background-color: #f5f5f5;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -404,12 +417,10 @@ aside .side-nav li a .fa {
 .tutorials p {
   font-size: 14px;
   color: #666666;
-  display: inline-block;
   margin-bottom: 0;
   line-height: 1.5em;
 }
 .tutorials a {
-  display: block;
   font-size: 12px;
 }
 .info-area {
