@@ -1,0 +1,290 @@
+html {
+  height: 100%;
+}
+html body {
+  font-family: "Exo 2", sans-serif;
+  color: #666666;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Exo 2", sans-serif;
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span,
+.h1 span,
+.h2 span,
+.h3 span,
+.h4 span,
+.h5 span,
+.h6 span {
+  color: #aaaaaa;
+}
+a {
+  color: #63b474;
+}
+a:hover,
+a:focus {
+  color: #3c8d4d;
+}
+a:focus {
+  outline: 0 none;
+}
+header .navbar-pf {
+  background-color: #63b474;
+  border: none;
+}
+header .navbar-pf .navbar-header {
+  border: none;
+}
+header .navbar-pf .navbar-utility {
+  padding-right: 15px;
+}
+header .navbar-pf .navbar-utility a.lo-user {
+  border: none;
+  color: #fff !important;
+  font-size: 13px;
+  line-height: 19px;
+}
+header .navbar-pf .navbar-utility a.lo-user:hover {
+  background-color: #51A362;
+}
+header .navbar-pf .navbar-primary {
+  background-color: #ebebeb;
+  background-image: none;
+  min-height: 40px;
+  margin-bottom: 0;
+  border: 1px solid #CDCDC5;
+}
+header .navbar-pf .navbar-primary > li.dropdown.context {
+  background: #DEDCDC;
+}
+header .navbar-pf .navbar-primary > li.dropdown.context a,
+header .navbar-pf .navbar-primary > li.dropdown.context a:hover {
+  border: none;
+  background: none;
+  color: #666666;
+  text-align: center;
+}
+header .navbar-pf .navbar-brand {
+  margin: 0;
+  padding: 0 20px;
+}
+header .navbar-pf .navbar-brand h1 {
+  font-size: 18px;
+  margin: 0;
+  line-height: 36px;
+  color: #fff;
+}
+header .navbar-pf .navbar-brand h1:hover {
+  text-decoration: underline;
+}
+div.lo-main {
+  background: #f5f5f5;
+  height: 100%;
+}
+div.lo-main > * {
+  height: 100%;
+}
+/* Side menu - TODO */
+aside.bs-sidebar {
+  background: #343434;
+  height: 100%;
+  padding: 0;
+}
+aside.bs-sidebar .dropdown {
+  margin-top: 10px;
+}
+aside.bs-sidebar .dropdown-toggle {
+  display: block;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: bold;
+  padding: 10px 10px 12px 20px;
+  color: #aaaaaa;
+  background-color: #404040;
+  border-color: #525252;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  text-align: center;
+}
+aside.bs-sidebar .dropdown-toggle:hover,
+aside.bs-sidebar .dropdown-toggle:focus,
+aside.bs-sidebar .dropdown-toggle:active {
+  background-color: #464646;
+  text-decoration: none;
+}
+aside.bs-sidebar .dropdown-toggle .caret {
+  float: right;
+  margin-top: 3px;
+}
+aside.bs-sidebar .dropdown-menu {
+  margin-top: 1px;
+  width: 100%;
+  text-align: center;
+}
+aside.bs-sidebar .side-nav li {
+  text-align: center;
+  margin-top: 36px;
+}
+aside.bs-sidebar .side-nav li:first-child {
+  margin-top: 32px;
+}
+aside.bs-sidebar .side-nav li.active {
+  background: url(../css/img/sidebar-active.svg) no-repeat right 14px;
+}
+aside.bs-sidebar .side-nav li.active a {
+  color: #fff;
+}
+aside.bs-sidebar .side-nav li a {
+  font-size: 14px;
+  color: #a2a2a1;
+  font-weight: bold;
+}
+aside.bs-sidebar .side-nav li a:hover,
+aside.bs-sidebar .side-nav li a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+aside.bs-sidebar .side-nav li a .fa {
+  display: block;
+}
+/* Box content - TODO */
+.lo-dashboard .panel-body .lo-measure-box > div {
+  text-align: left;
+}
+.lo-dashboard .panel-body > div {
+  width: 33.333333%;
+  text-align: center;
+  float: left;
+  font-size: 0.6em;
+  margin-top: 30px;
+  display: table;
+}
+.lo-dashboard .panel-body > div.highlight {
+  width: 100%;
+  margin-top: 0;
+  font-size: 1em;
+  float: none;
+}
+.lo-dashboard .panel-body > div.highlight .text {
+  font-size: 16px;
+  padding-left: 5px;
+}
+.lo-dashboard .panel-body > div em {
+  font-size: 11.63636363636364em;
+  font-weight: 300;
+  line-height: 0.6em;
+  margin-bottom: -0.078125em;
+}
+.lo-dashboard .panel-body > div .measure {
+  font-size: 2.5em;
+  line-height: 0.5em;
+}
+.lo-dashboard .panel-body > div .text {
+  font-size: 13px;
+  color: #aaaaaa;
+  padding-left: 3px;
+  display: block;
+}
+.lo-dashboard .panel-body > div i {
+  display: table-cell;
+  font-size: 10.54545454545455em;
+  text-align: right;
+  vertical-align: middle;
+}
+.lo-dashboard .panel-body > div.api {
+  color: #69a8cd;
+}
+.lo-dashboard .panel-body > div.users {
+  color: #e9b356;
+}
+.lo-dashboard .panel-body > div.push {
+  color: #e39090;
+}
+.lo-dashboard .panel-body > div.storage {
+  color: #6ab1ad;
+}
+.tutorials {
+  padding: 0 15px;
+}
+.tutorials h3 {
+  margin-top: 28px;
+}
+.tutorials i {
+  float: left;
+  margin-right: 15px;
+  color: #aaaaaa;
+}
+.tutorials p {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+.tutorials a {
+  font-size: 12px;
+}
+.info-area {
+  height: 100%;
+  background: #fff;
+  padding: 0 20px;
+}
+.info-area h3 {
+  margin-top: 30px;
+  margin-bottom: 22px;
+}
+.info-area .details > div {
+  margin-bottom: 25px;
+}
+.info-area .details > div div {
+  margin-top: 8px;
+  font-size: 12px;
+}
+.info-area .details > div div:first-child {
+  margin-top: 0;
+}
+.info-area .details > div .lo-label {
+  color: #aaaaaa;
+  font-weight: normal;
+  padding: 0;
+  display: block;
+  text-align: left;
+}
+.info-area .details > div .lo-field {
+  display: inline-block;
+  margin-top: 2px;
+}
+.info-area .details > div .field + button {
+  padding-left: 5px;
+}
+.info-area .details > div .circle {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background-color: #63b474;
+  display: inline-block;
+}
+.info-area .details > div > a {
+  display: inline-block;
+  margin-top: 6px;
+}
+.info-area .details > div ul {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
