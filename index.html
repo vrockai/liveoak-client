@@ -11,89 +11,75 @@
 </head>
 
 <body class="app-dashboard">
-<header>
-    <nav class="navbar navbar-default navbar-pf">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">
-                <h1>LiveOak</h1>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-utility">
-                <li class="dropdown">
-                    <a href="#" class="lo-user dropdown-toggle" data-toggle="dropdown">
-                        <span class="pficon pficon-user"></span>
-                        Brian Johnson <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">Manage Account</a>
-                        </li>
-                        <li class="separator">
-                            <a href="#">Sign Out</a>
-                        </li>
-                    </ul>
-                </li>
+<div class="row">
+    <header>
+        <nav class="navbar navbar-default navbar-pf">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <h1>LiveOak</h1>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-utility">
+                    <li class="dropdown">
+                        <a href="#" class="lo-user dropdown-toggle" data-toggle="dropdown">
+                            <span class="pficon pficon-user"></span>
+                            Brian Johnson <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Manage Account</a>
+                            </li>
+                            <li class="separator">
+                                <a href="#">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-primary">
+                    <li class="dropdown context col-md-2">
+                        <a href="#">
+                            Applications
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">MyApp</a>
+                            </li>
+                            <li>
+                                <a href="#">MyOtherApp</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+<div id="content-row" class="row">
+    <aside class="bs-sidebar col-md-2 fixed clearfix">
+        <div class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a href="#">MyApp</a></li>
+                <li><a href="#">OtherApp</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-primary">
-                <li class="dropdown context col-md-2">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Applications
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">MyApp</a>
-                        </li>
-                        <li>
-                            <a href="#">MyOtherApp</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
         </div>
-    </nav>
-    <!--
-    <div class="navbar primary">
-        <ul class="nav col-md-2">
-            <li class="active">
-                <a href="#">Applications</a>
-            </li>
+        <ul class="side-nav">
+            <li class="active dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
+            <li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
+            <li class="storage"><a href="#"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
+            <li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
         </ul>
-    </div>
-    -->
-</header>
-
-<aside class="bs-sidebar col-md-2 fixed clearfix">
-    <!--
-    <div class="dropdown">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li class="active"><a href="#">MyApp</a></li>
-            <li><a href="#">OtherApp</a></li>
-        </ul>
-    </div>
-    -->
-    <ul class="side-nav">
-        <li class="active dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
-        <li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
-        <li class="storage"><a href="#"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
-        <li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
-    </ul>
-</aside>
-
-<div class="aside-bg col-md-2 fixed"></div>
-
-<div class="col-md-10 lo-main">
-    <div class="row">
-        <div class="content-area col-md-10">
-            <!--div class="content"-->
+    </aside>
+    <div class="col-md-10 lo-main">
+        <div class="row">
+            <div class="content-area col-md-10">
                 <ol class="breadcrumb">
                     <li><a href="#">Applications</a></li>
                     <li><a href="#">MyApp</a></li>
@@ -153,48 +139,47 @@
                     <p>Explore LiveOak Documentation and learn how to set up Security, Data and Push.</p>
                     <a href="#">How to start building your app »</a>
                 </section>
-            <!--/div-->
-        </div>
-        <!--div class="content-area-bg col-md-10 col-md-offset-2"></div-->
-        <div class="info-area col-md-2">
-            <section class="details">
-                <h3><span>MyApp</span> Details</h3>
-                <div class="security">
-                    <div>
-                        <span class="lo-label">App Status</span>
-                        <span class="lo-field"><i class="circle"></i> Running</span>
+            </div>
+            <div class="info-area col-md-2">
+                <section class="details">
+                    <h3><span>MyApp</span> Details</h3>
+                    <div class="security">
+                        <div>
+                            <span class="lo-label">App Status</span>
+                            <span class="lo-field"><i class="circle"></i> Running</span>
+                        </div>
+                        <div>
+                            <span class="lo-label">App Key</span>
+                            <span class="lo-field">jieu89-eiW38oskj</span>
+                            <button class="lo-icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                        </div>
+                        <div>
+                            <span class="lo-label">App Secret</span>
+                            <span class="lo-field">9iugjW39vnlz90ei9ejiDoi</span>
+                            <button class="lo-icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                        </div>
+                        <a href="#">View <strong>Security Settings</strong> »</a>
                     </div>
-                    <div>
-                        <span class="lo-label">App Key</span>
-                        <span class="lo-field">jieu89-eiW38oskj</span>
-                        <button class="icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                    <div class="storage">
+                        <div>
+                            <span class="lo-label">Storage</span>
+                            <ul>
+                                <li><span class="lo-field">MyFirstStorage</span></li>
+                                <li><span class="lo-field">MySecondStorage</span></li>
+                                <li><span class="lo-field">MyThirdStorage</span></li>
+                            </ul>
+                        </div>
+                        <a href="#">View All <strong>Storage Resources</strong> »</a>
                     </div>
-                    <div>
-                        <span class="lo-label">App Secret</span>
-                        <span class="lo-field">9iugjW39vnlz90ei9ejiDoi</span>
-                        <button class="icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                    <div class="security">
+                        <div>
+                            <span class="lo-label">Push Notifications</span>
+                            <span class="lo-field">Not Set Up</span>
+                        </div>
+                        <a href="#">View <strong>Push Settings</strong> »</a>
                     </div>
-                    <a href="#">View <strong>Security Settings</strong> »</a>
-                </div>
-                <div class="storage">
-                    <div>
-                        <span class="lo-label">Storage</span>
-                        <ul>
-                            <li><span class="lo-field">MyFirstStorage</span></li>
-                            <li><span class="lo-field">MySecondStorage</span></li>
-                            <li><span class="lo-field">MyThirdStorage</span></li>
-                        </ul>
-                    </div>
-                    <a href="#">View All <strong>Storage Resources</strong> »</a>
-                </div>
-                <div class="security">
-                    <div>
-                        <span class="lo-label">Push Notifications</span>
-                        <span class="lo-field">Not Set Up</span>
-                    </div>
-                    <a href="#">View <strong>Push Settings</strong> »</a>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </div>
 </div>
