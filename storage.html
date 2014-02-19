@@ -10,7 +10,7 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 
-<body class="lo-list-page">
+<body class="app-dashboard">
 <div class="row">
     <header>
         <nav class="navbar navbar-default navbar-pf">
@@ -53,8 +53,8 @@
         </nav>
     </header>
 </div>
-<div id="content-row" class="row">
-    <aside class="bs-sidebar col-md-2 fixed clearfix">
+<div id="lo-content-row" class="row">
+    <aside class="lo-sidebar col-md-2 fixed clearfix">
         <div class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -62,16 +62,21 @@
                 <li><a href="#">OtherApp</a></li>
             </ul>
         </div>
-        <ul class="side-nav">
-            <li class="dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
-            <li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
-            <li class="storage active"><a href="#"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
-            <li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
-        </ul>
+        <nav class="navbar navbar-vertical" role="navigation">
+            <div class="bs-sidebar">
+                <ul>
+
+                    <li class="active dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
+                    <li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
+                    <li class="storage"><a href="storage.html"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
+                    <li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
+                </ul>
+            </div>
+        </nav>
     </aside>
-    <div class="col-md-10 lo-main">
+    <div class="col-md-10 lo-main-pane">
         <div class="row">
-            <div class="content-area col-md-10">
+            <div class="lo-content-area col-md-10">
                 <ol class="breadcrumb">
                     <li><a href="#">Applications</a></li>
                     <li><a href="#">MyApp</a></li>
@@ -79,6 +84,7 @@
                 </ol>
 
                 <h2><span>MyApp</span> Storage</h2>
+
                 <div class="lo-page-info">
                     <p>
                         <span class="lo-emph">You have</span> <strong>1</strong> storage resource.
@@ -88,7 +94,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default lo-entity-storage">
+                <div class="panel panel-default lo-panel lo-panel-storage">
                     <div class="panel-heading">
                         <h2 class="panel-title">MySecondApp</h2>
 
@@ -114,14 +120,14 @@
                     </div>
                 </div>
             </div>
-            <div class="info-area col-md-2">
+            <div class="lo-info-pane col-md-2">
                 <section class="lo-tutorials">
                     <h3><span>LiveOak</span> Tutorials</h3>
                     <i class="fa fa-file-text-o fa-4x"></i>
                     <p>
                         Explore LiveOak Documentation and learn how to set up Security Data and Push.
                     </p>
-                    <a href="#">How to start building your app »</a>
+                    <a href="#">How to start your own app »</a>
                 </section>
             </div>
         </div>

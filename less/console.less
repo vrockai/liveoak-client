@@ -40,6 +40,7 @@
 
 html {
   body {
+    line-height: 1.909em;
     font-family: @exo;
     color: @c_graydark;
   }
@@ -48,7 +49,7 @@ html {
 /* 100% height hack TODO - think of something better */
 html, body,
 #lo-content-row, .lo-sidebar,
-.lo-main-pane, .lo-main-pane > .row, .lo-content-area, .lo-info-area
+.lo-main-pane, .lo-main-pane > .row, .lo-content-area, .lo-info-area, .lo-info-pane
 {
   height: 100%;
 }
@@ -97,7 +98,6 @@ p {
 
 /* Information from the top of the main content pane */
 .lo-page-info {
-
   margin-bottom: 2em;
 
   p {
@@ -111,65 +111,61 @@ p {
 }
 
 /* Top Menu */
-header {
+.navbar-pf {
+  background-color: @c_green;
+  border: none;
 
-  .navbar-pf {
-
-    background-color: @c_green;
+  .navbar-header {
     border: none;
+  }
 
-    .navbar-header {
+  .navbar-utility {
+    padding-right: 15px;
+
+    a.lo-user {
       border: none;
+      color: @c_white !important;
+      font-size: @fsizebig;
+      line-height: 22px;
+
+      &:hover {
+        background-color: @c_greendark;
+      }
     }
+  }
 
-    .navbar-utility {
-      padding-right: 15px;
+  .navbar-primary {
+    background-color: @c_navlight;
+    background-image: none;
+    min-height: 40px;
+    margin-bottom: 0;
+    border: solid @c_border;
+    border-width: 1px 0;
 
-      a.lo-user {
+    > li.dropdown.context {
+      background: @c_nav;
+
+      a, a:hover {
         border: none;
-        color: @c_white !important;
-        font-size: 13px;
-        line-height: 22px;
-
-        &:hover {
-          background-color: @c_greendark;
-        }
+        background: none;
+        color: @c_navdark;
+        text-align: center;
       }
     }
+  }
 
-    .navbar-primary {
-      background-color: @c_navlight;
-      background-image: none;
-      min-height: 40px;
-      margin-bottom: 0;
-      border: solid @c_border;
-      border-width: 1px 0;
+  .navbar-brand {
+    margin: 0;
+    padding: 0 20px;
 
-      > li.dropdown.context {
-        background: @c_nav;
-
-        a, a:hover {
-          border: none;
-          background: none;
-          color: @c_navdark;
-          text-align: center;
-        }
-      }
-    }
-
-    .navbar-brand {
+    h1 {
+      font-size: 18px;
       margin: 0;
-      padding: 0 20px;
+      line-height: 36px;
+      color: @c_white;
 
-      h1 {
-        font-size: 18px;
-        margin: 0;
-        line-height: 36px;
-        color: @c_white;
-
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -177,7 +173,6 @@ header {
 
 /* Side menu (1st column) */
 .lo-sidebar {
-
   background: @c_snav;
   padding: 0;
 
@@ -198,9 +193,7 @@ header {
       border-bottom-width: 1px;
       text-align: center;
 
-      &:hover,
-      &:focus,
-      &:active {
+      &:hover, &:focus, &:active {
         background-color: @c_snavslight;
         text-decoration: none;
       }
@@ -219,7 +212,6 @@ header {
   }
 
   .navbar-vertical {
-
     border: none;
 
     li {
@@ -282,12 +274,10 @@ header {
 
 /* Panel */
 .lo-panel {
-
   &.panel-default {
     border: none;
 
     .panel-heading {
-
       background: #fff;
       border-bottom: 1px solid @c_mainpane;
 
@@ -307,25 +297,12 @@ header {
 
 /* Panel entity */
 [class*="lo-panel-"] {
-  &.panel-default .panel-heading .panel-title {
-    color: @c_green;
-  }
-
-  .panel-heading, .panel-body {
-    padding : 1em;
-  }
-}
-
-/* Panel App */
-.lo-panel-app {
-
   .dropdown {
-
     .dropdown-toggle {
-
       > i {
         font-size: 1.5em;
       }
+
       > b {
         display: none;
       }
@@ -338,18 +315,22 @@ header {
     }
   }
 
-  &.panel-default {
-    .panel-heading {
-      border-bottom: none;
+  &.panel-default .panel-heading {
+    border-bottom: none;
 
+    .panel-title {
+      color: @c_green;
     }
   }
 
+  .panel-heading, .panel-body {
+    padding : 1em;
+  }
+
   .panel-body {
-
     padding-top: 0;
-    .lo-app-opts {
 
+    .lo-app-opts {
       margin-bottom: 0;
 
       li {
@@ -364,21 +345,37 @@ header {
             font-size: 1.25em;
             margin-right: 0.25em;
           }
+
+          &:hover {
+            color: @c_graydark;
+            text-decoration: none;
+          }
+
         }
       }
     }
   }
 }
 
+/* Panel App */
+.lo-panel-app {
+
+}
+
 /* Panel Storage */
 .lo-panel-storage {
-
+  .dropdown {
+    .dropdown-toggle {
+      > i {
+        color: @c_gray;
+      }
+    }
+  }
 }
 
 /* Panel Dashboard */
 .lo-panel.lo-dashboard .panel-body {
   .lo-measure-box {
-
     width: 33.333333%;
     font-size: 0.6em;
     margin-top: 30px;
@@ -445,15 +442,12 @@ header {
 
 /* The info area (3rd column) */
 .lo-info-pane {
-
   font-size: @fsize;
+  background: @c_white;
 
   a {
     font-size: @fsize;
   }
-
-  height: 100%;
-  background: @c_white;
 
   h3 {
     margin-top: 30px;
@@ -462,6 +456,7 @@ header {
 
   h4 {
     color: @c_green;
+    font-weight: 600;
   }
 
   section  {
@@ -470,13 +465,14 @@ header {
     > div {
       /*margin-bottom: 1em;*/
       margin-top: 8px;
+      font-size: @fsize;
 
       &:first-child {
         margin-top: 0;
       }
 
       .lo-label {
-        color: @c_gray;
+        color: @c_graylight;
         font-weight: normal;
         padding: 0;
         display: block;
@@ -512,12 +508,12 @@ header {
     }
 
     &.lo-tutorials {
-
       i {
         float: left;
       }
 
       p, a {
+        display:block;
         font-size: @fsizebig;
         padding-left: 3.5em;
       }
@@ -561,6 +557,73 @@ button.lo-icon-button {
   }
 }
 
+/* LO form specific */
+.lo-form-horizontal {
+  fieldset {
+    margin-bottom: 2em;
+  }
+
+  .control-label {
+    text-align: right;
+    padding-right: 0;
+    color: @c_graylight;
+
+    > span {
+      margin-left: .5em;
+      color: red;
+    }
+  }
+
+  .form-group > div {
+    padding-left: .5em;
+  }
+
+  .lo-db-instances {
+    text-align: center;
+
+    [class*="lo-db-"] {
+      text-indent: -9999em;
+      background: @c_white;
+      border:1px solid @c_mainpane - 30;
+      display:inline-block;
+      width: 170px;
+      height: 100px;
+      border-radius:10px;
+      margin: 1em;
+      cursor: pointer;
+
+      &:hover {
+        border:1px solid @c_green;
+      }
+
+      &.active{
+        border:3px solid @c_green;
+      }
+    }
+
+    .lo-db-mongo {
+      background: #3f2c1a;
+      background-image: url("img/mongo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .lo-db-mysql {
+      background: @c_white;
+      background-image: url("img/mysql.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .lo-db-plsql {
+      background: @c_white;
+      background-image: url("img/plsql.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 /* Collapsible forms */
 legend {
   border-width: 1px 0 0 0;
@@ -568,8 +631,15 @@ legend {
   border-style: solid;
   padding-top: .5em;
 
+  span {
+    font-weight: 600;
+    color: @c_graylight;
+    cursor: pointer;
+  }
+
   &:before{
     content: "";
+    color: @c_graylight;
     display: inline-block;
     font-family: "FontAwesome";
     font-weight: normal;
@@ -589,7 +659,6 @@ legend {
 
 /* Button group in dashboard panel header */
 .lo-dashboard .btn-group {
-
   .btn {
     font-size: 12px;
     padding: 6px 15px 6px;
@@ -635,6 +704,10 @@ legend {
 }
 
 /* Buttons */
+.btn {
+  margin-left: .5em;
+}
+
 .btn-primary
 {
   background-color: @c_green;
@@ -666,7 +739,6 @@ legend {
 
 /* Dropdown */
 .dropdown-menu {
-
   margin-top: 0;
   padding: 5px 0 4px;
 
@@ -687,11 +759,23 @@ legend {
     border-color: #c1e1c7;
   }
 
-  > li.active > a,
-  > li.active > a:hover {
-    background-color: @c_green !important; /* Fix in patternfly */
-    color: #FFFFFF;
-    border-color: @c_greendark !important; /* Fix in patternfly */
+  > li.active {
+    > a,> a:hover {
+      background-color: @c_green !important; /* Fix in patternfly */
+      color: #FFFFFF;
+      border-color: @c_greendark !important; /* Fix in patternfly */
+    }
+  }
+}
+
+/* Forms */
+.form-control{
+  &:focus, &:hover {
+    border-color: @c_green;
+  }
+
+  &:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 73, 0.6);
   }
 }
 
@@ -703,7 +787,6 @@ legend {
 
 /* Fix for user icon in main nav */
 .navbar-pf .navbar-utility {
-
   li.dropdown > .dropdown-toggle .pficon-user {
     position: static;
   }
