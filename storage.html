@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MyApp Dashboard - LiveOak</title>
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/pfly/css/patternfly.css">
+    <link rel="stylesheet" href="dist/css/console.css">
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:300,300italic,400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body class="lo-list-page">
+<div class="row">
+    <header>
+        <nav class="navbar navbar-default navbar-pf">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <h1>LiveOak</h1>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-utility">
+                    <li class="dropdown">
+                        <a href="#" class="lo-user dropdown-toggle" data-toggle="dropdown">
+                            <span class="pficon pficon-user"></span>
+                            Brian Johnson <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Manage Account</a>
+                            </li>
+                            <li class="separator">
+                                <a href="#">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-primary">
+                    <li class="dropdown context col-md-2">
+                        <a href="app.html">
+                            Applications
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+<div id="content-row" class="row">
+    <aside class="bs-sidebar col-md-2 fixed clearfix">
+        <div class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a href="#">MyApp</a></li>
+                <li><a href="#">OtherApp</a></li>
+            </ul>
+        </div>
+        <ul class="side-nav">
+            <li class="dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
+            <li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
+            <li class="storage active"><a href="#"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
+            <li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
+        </ul>
+    </aside>
+    <div class="col-md-10 lo-main">
+        <div class="row">
+            <div class="content-area col-md-10">
+                <ol class="breadcrumb">
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">MyApp</a></li>
+                    <li class="active">Storage</li>
+                </ol>
+
+                <h2><span>MyApp</span> Storage</h2>
+                <div class="lo-page-info">
+                    <p>
+                        <span class="lo-emph">You have</span> <strong>1</strong> storage resource.
+                    </p>
+                    <div class="pull-right">
+                        <a href="storageNew.html" class="btn btn-primary btn-lg " type="button">New Storage</a>
+                    </div>
+                </div>
+
+                <div class="panel panel-default lo-entity-storage">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">MySecondApp</h2>
+
+                        <div class="pull-right">
+                            <div class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="fa fa-trash-o"></i><b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Rename...</a></li>
+                                    <li role="presentation" class="divider"></li>
+                                    <li><a href="#">Delete...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <ul class="lo-app-opts">
+                            <li><a href="#"><i class="fa fa-briefcase"></i>Mongo DB</a></li>
+                            <li><a href="#"><i class="fa fa-link"></i>/storage</a></li>
+                            <li><a href="#"><i class="fa fa-desktop"></i>localhost</a></li>
+                            <li><a href="#"><i class="fa fa-thumb-tack"></i>123456</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info-area col-md-2">
+                <section class="lo-tutorials">
+                    <h3><span>LiveOak</span> Tutorials</h3>
+                    <i class="fa fa-file-text-o fa-4x"></i>
+                    <p>
+                        Explore LiveOak Documentation and learn how to set up Security Data and Push.
+                    </p>
+                    <a href="#">How to start building your app »</a>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="dist/js/bootstrap.js"></script>
+<script src="dist/js/pf-keyswitch.js"></script>
+<script>$('body').tooltip({selector: "[data-toggle=tooltip]",container: "body"});</script>
+</html>

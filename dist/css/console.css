@@ -3,7 +3,7 @@ html body {
   color: #666666;
 }
 html body .lo-main .content-area {
-  padding-left: 30px;
+  padding: 0 30px;
 }
 html,
 body,
@@ -92,7 +92,7 @@ header .navbar-pf .navbar-primary {
   background-image: none;
   min-height: 40px;
   margin-bottom: 0;
-  border: 1px solid #CDCDC5;
+  border: 1px solid #cdcdc5;
 }
 header .navbar-pf .navbar-primary > li.dropdown.context {
   background: #DEDCDC;
@@ -249,6 +249,102 @@ aside.bs-sidebar .side-nav li a .fa {
   font-size: 16px;
   padding-left: 5px;
 }
+.lo-list-page p {
+  font-size: 14px;
+  color: #666666;
+  margin: 1.5em 0 1.5em 0;
+  line-height: 1.5em;
+}
+.lo-list-page .lo-emph {
+  color: #aaaaaa;
+}
+.lo-list-page .info-area {
+  border-left: 1px solid #cdcdc5;
+}
+.lo-list-page [class*="lo-entity-"] h2 {
+  color: #63b474;
+  font-size: 1.5em;
+  font-weight: 400;
+  display: inline-block;
+  width: 50%;
+}
+.lo-list-page [class*="lo-entity-"].panel-default,
+.lo-list-page [class*="lo-entity-"] .panel-heading {
+  border: none;
+  background-color: white;
+}
+.lo-list-page [class*="lo-entity-"] .dropdown-toggle > i {
+  font-size: 2em;
+}
+.lo-list-page [class*="lo-entity-"] .dropdown-toggle > b {
+  display: none;
+}
+.lo-list-page [class*="lo-entity-"] .dropdown-menu {
+  left: auto;
+  right: 0;
+  min-width: inherit;
+}
+.lo-list-page [class*="lo-entity-"] .panel-body {
+  padding-top: 0;
+}
+.lo-list-page [class*="lo-entity-"] .panel-body .lo-app-opts {
+  margin-bottom: 0;
+}
+.lo-list-page [class*="lo-entity-"] .panel-body .lo-app-opts li {
+  display: inline-block;
+  margin-right: 2em;
+  font-size: 1.2em;
+}
+.lo-list-page [class*="lo-entity-"] .panel-body .lo-app-opts li a {
+  color: #848484;
+}
+.lo-list-page [class*="lo-entity-"] .panel-body .lo-app-opts li a i {
+  font-size: 1.25em;
+  margin-right: 0.25em;
+}
+.lo-list-page .lo-entity-storage .panel-heading i {
+  color: #666666;
+}
+.lo-list-page .lo-page-info p {
+  display: inline-block;
+}
+.lo-list-page .lo-page-info .btn {
+  margin-top: 1.5em;
+}
+.lo-list-page .lo-tutorials {
+  padding-top: 4em;
+}
+.lo-list-page .lo-tutorials > i {
+  float: left;
+  color: #aaaaaa;
+}
+.lo-list-page .lo-tutorials p {
+  color: #aaaaaa;
+}
+.lo-list-page .lo-tutorials p,
+.lo-list-page .lo-tutorials a {
+  margin-left: 45px;
+}
+.lo-list-page .lo-form-horizontal .control-label {
+  text-align: right;
+  padding-right: 0;
+}
+.lo-list-page .lo-form-horizontal .control-label > span {
+  margin-left: .75em;
+  color: red;
+}
+.lo-list-page .lo-form-horizontal .lo-db-instances {
+  text-align: center;
+}
+.lo-list-page .lo-form-horizontal .lo-db-instances .lo-db-unit {
+  display: inline-block;
+  width: 170px;
+  height: 100px;
+  background: #f0f0f0;
+  border: 3px solid #63b474;
+  border-radius: 10px;
+  margin: 0 5px;
+}
 .tutorials {
   padding: 0 15px;
 }
@@ -278,82 +374,99 @@ aside.bs-sidebar .side-nav li a .fa {
   margin-top: 30px;
   margin-bottom: 22px;
 }
-.info-area .details > div {
+.info-area h4 {
+  color: #63b474;
+}
+.info-area section > div {
   margin-bottom: 25px;
 }
-.info-area .details > div div {
+.info-area section > div div {
   margin-top: 8px;
   font-size: 12px;
 }
-.info-area .details > div div:first-child {
+.info-area section > div div:first-child {
   margin-top: 0;
 }
-.info-area .details > div .lo-label {
+.info-area section > div .lo-label {
   color: #aaaaaa;
   font-weight: normal;
   padding: 0;
   display: block;
   text-align: left;
 }
-.info-area .details > div .lo-field {
+.info-area section > div .lo-field {
   display: inline-block;
   margin-top: 2px;
 }
-.info-area .details > div .field + button {
+.info-area section > div .field + button {
   padding-left: 5px;
 }
-.info-area .details > div .circle {
+.info-area section > div .circle {
   border-radius: 50%;
   width: 7px;
   height: 7px;
   background-color: #63b474;
   display: inline-block;
 }
-.info-area .details > div > a {
+.info-area section > div > a {
   display: inline-block;
   margin-top: 6px;
 }
-.info-area .details > div ul {
+.info-area section > div ul {
   margin-top: 2px;
   margin-bottom: 0;
 }
 /* Overriding PF widgets */
-.btn {
+.lo-dashboard .btn {
   font-size: 12px;
   padding: 6px 15px 6px;
   line-height: 12px;
   box-shadow: none;
 }
-.btn-primary {
+.lo-dashboard .btn-primary {
   background-color: #63b474;
   border-color: #619e6e;
   color: #FFFFFF;
 }
-.btn-default {
+.lo-dashboard .btn-default {
   background-color: #FFFFFF;
   background-image: none;
   border-color: #ddd;
   color: #777;
   font-weight: normal;
 }
-.btn-default:hover,
-.btn-default:focus,
-.btn-default:active,
-.btn-default.active,
-.open .dropdown-toggle.btn-default {
+.lo-dashboard .btn-default:hover,
+.lo-dashboard .btn-default:focus,
+.lo-dashboard .btn-default:active,
+.lo-dashboard .btn-default.active,
+.lo-dashboard .open .dropdown-toggle.btn-default {
   background-color: #f3f3f3;
   border-color: #ccc;
   color: #555;
 }
-.btn-default:active,
-.btn-default.active {
+.lo-dashboard .btn-default:active,
+.lo-dashboard .btn-default.active {
   font-weight: bold;
   background-image: none;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15) inset;
   border-color: #ccc;
 }
-.btn-default:active {
+.lo-dashboard .btn-default:active {
   font-weight: normal;
+}
+.btn-primary {
+  background-color: #63b474;
+  border-color: #59aa6a;
+  background-image: linear-gradient(to bottom, #6dbe7e 0%, #63b474 100%);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-color: #4fa060;
+  border-color: #459656;
+  background-image: linear-gradient(to bottom, #59aa6a 0%, #459656 100%);
 }
 /* Breadcrumb */
 .breadcrumb {
@@ -391,7 +504,6 @@ button.lo-icon:active i {
 }
 /* Dropdown */
 .dropdown-menu {
-  border-top-width: 0;
   font-size: 12px;
   margin-top: 0;
   padding: 5px 0 4px;

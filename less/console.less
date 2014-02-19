@@ -3,13 +3,14 @@
 @link-darker: #3c8d4d;
 @gray: #aaa;
 @dark: #666;
+@border: #CDCDC5;
 
 html {
   body {
     font-family: @exo;
     color: @dark;
     .lo-main .content-area{
-      padding-left: 30px;
+      padding: 0 30px;
     }
   }
 }
@@ -91,7 +92,7 @@ header {
       background-image: none;
       min-height: 40px;
       margin-bottom: 0;
-      border: 1px solid #CDCDC5;
+      border: 1px solid @border;
 
       > li.dropdown.context {
         background: #DEDCDC;
@@ -291,6 +292,140 @@ aside.bs-sidebar {
   }
 }
 
+.lo-list-page {
+  p {
+    font-size: 14px;
+    color: @dark;
+    margin: 1.5em 0 1.5em 0;
+    line-height: 1.5em;
+  }
+
+  .lo-emph {
+    color: @gray
+  }
+
+  .info-area {
+    border-left: 1px solid @border;
+  }
+
+
+  [class*="lo-entity-"] {
+    h2 {
+      color: @link;
+      font-size: 1.5em;
+      font-weight: 400;
+      display: inline-block;
+      width: 50%;
+    }
+
+    &.panel-default, .panel-heading {
+      border: none;
+      background-color: white;
+    }
+
+    .dropdown-toggle {
+      > i {
+        font-size: 2em;
+      }
+      > b {
+        display: none;
+      }
+    }
+
+    .dropdown-menu{
+      left: auto;
+      right: 0;
+      min-width: inherit;
+    }
+
+    .panel-body {
+      padding-top: 0;
+
+      .lo-app-opts {
+
+        margin-bottom: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 2em;
+          font-size: 1.2em;
+
+          a {
+            color: @dark + 30;
+
+            i {
+              font-size: 1.25em;
+              margin-right: 0.25em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .lo-entity-storage {
+    .panel-heading {
+      i {
+        color: @dark;
+      }
+    }
+  }
+
+  .lo-page-info {
+    p {
+      display: inline-block;
+    }
+
+    .btn {
+      margin-top:1.5em;
+    }
+  }
+
+  .lo-tutorials {
+    padding-top: 4em;
+
+    >i {
+      float: left;
+      color: @gray;
+    }
+
+    p {
+      color: @gray;
+    }
+
+    p, a {
+      margin-left: 45px;
+    }
+  }
+
+  .lo-form-horizontal {
+
+    .control-label {
+      text-align: right;
+      padding-right: 0;
+      > span {
+        margin-left: .75em;
+        color: red;
+      }
+    }
+
+    .lo-db-instances {
+      text-align: center;
+
+      .lo-db-unit {
+        display:inline-block;
+        width: 170px;
+        height: 100px;
+        background: #f0f0f0;
+        border:3px solid @link;
+        border-radius:10px;
+        margin: 0 5px;
+      }
+    }
+  }
+
+}
+
 .tutorials {
   padding: 0 15px;
 
@@ -327,7 +462,11 @@ aside.bs-sidebar {
     margin-bottom: 22px;
   }
 
-  .details > div {
+  h4 {
+    color: @link;
+  }
+
+  section > div {
     margin-bottom: 25px;
 
     div {
@@ -377,6 +516,8 @@ aside.bs-sidebar {
 }
 
 /* Overriding PF widgets */
+
+.lo-dashboard{
 .btn {
   font-size: 12px;
   padding: 6px 15px 6px;
@@ -418,6 +559,26 @@ aside.bs-sidebar {
 
 .btn-default:active {
   font-weight: normal;
+}
+}
+
+.btn-primary
+{
+  background-color: @link;
+  border-color: @link - 10;
+  background-image: linear-gradient(to bottom, @link + 10 0%, @link 100%);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open
+.dropdown-toggle.btn-primary
+{
+  background-color: @link - 20;
+  border-color: @link - 30 ;
+  background-image: linear-gradient(to bottom, @link - 10 0%, @link - 30 100%);
 }
 
 /* Breadcrumb */
@@ -463,7 +624,6 @@ button.lo-icon {
 
 /* Dropdown */
 .dropdown-menu {
-  border-top-width: 0;
   font-size: 12px;
   margin-top: 0;
   padding: 5px 0 4px;
