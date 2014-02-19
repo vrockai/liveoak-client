@@ -53,8 +53,8 @@
         </nav>
     </header>
 </div>
-<div id="content-row" class="row">
-    <aside class="bs-sidebar col-md-2 fixed clearfix">
+<div id="lo-content-row" class="row">
+    <aside class="lo-sidebar col-md-2 fixed clearfix">
         <div class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">My App<b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -62,23 +62,28 @@
                 <li><a href="#">OtherApp</a></li>
             </ul>
         </div>
-        <ul class="side-nav">
-            <li class="active dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
-            <li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
-            <li class="storage"><a href="storage.html"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
-            <li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
-        </ul>
+        <nav class="navbar navbar-vertical" role="navigation">
+            <div class="bs-sidebar">
+                <ul>
+
+                    <li class="active dashboard"><a href="#"><i class="fa fa-tachometer fa-3x"></i>Dashboard</a></li>
+                    <li class="security"><a href="#"><i class="fa fa-lock fa-3x"></i>Security</a></li>
+                    <li class="storage"><a href="storage.html"><i class="fa fa-cloud fa-3x"></i>Storage</a></li>
+                    <li class="push"><a href="#"><i class="fa fa-mobile fa-4x"></i>Push</a></li>
+                </ul>
+            </div>
+        </nav>
     </aside>
-    <div class="col-md-10 lo-main">
+    <div class="col-md-10 lo-main-pane">
         <div class="row">
-            <div class="content-area col-md-10">
+            <div class="lo-content-area col-md-10">
                 <ol class="breadcrumb">
                     <li><a href="#">Applications</a></li>
                     <li><a href="#">MyApp</a></li>
                     <li class="active">Dashboard</li>
                 </ol>
 
-                <div class="panel panel-default lo-dashboard">
+                <div class="panel panel-default lo-dashboard lo-panel">
 
                     <div class="panel-heading">
                         <h2 class="panel-title"><span>MyApp</span> Dashboard</h2>
@@ -125,17 +130,17 @@
                     </div>
                 </div>
 
-                <section class="tutorials">
+                <section class="lo-section">
                     <h3><span>LiveOak</span> Tutorials</h3>
                     <i class="fa fa-file-text-o fa-4x"></i>
                     <p>Explore LiveOak Documentation and learn how to set up Security, Data and Push.</p>
                     <a href="#">How to start building your app »</a>
                 </section>
             </div>
-            <div class="info-area col-md-2">
+            <div class="lo-info-pane col-md-2">
                 <section class="details">
                     <h3><span>MyApp</span> Details</h3>
-                    <div class="security">
+                    <section>
                         <div>
                             <span class="lo-label">App Status</span>
                             <span class="lo-field"><i class="circle"></i> Running</span>
@@ -143,16 +148,16 @@
                         <div>
                             <span class="lo-label">App Key</span>
                             <span class="lo-field">jieu89-eiW38oskj</span>
-                            <button class="lo-icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                            <button class="lo-icon-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
                         </div>
                         <div>
                             <span class="lo-label">App Secret</span>
                             <span class="lo-field">9iugjW39vnlz90ei9ejiDoi</span>
-                            <button class="lo-icon" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
+                            <button class="lo-icon-button" data-toggle="tooltip" data-placement="bottom" data-original-title="Copy"><i class="fa fa-copy"></i><span>Copy</span></button>
                         </div>
                         <a href="#">View <strong>Security Settings</strong> »</a>
-                    </div>
-                    <div class="storage">
+                    </section>
+                    <section>
                         <div>
                             <span class="lo-label">Storage</span>
                             <ul>
@@ -162,14 +167,14 @@
                             </ul>
                         </div>
                         <a href="#">View All <strong>Storage Resources</strong> »</a>
-                    </div>
-                    <div class="security">
+                    </section>
+                    <section>
                         <div>
                             <span class="lo-label">Push Notifications</span>
                             <span class="lo-field">Not Set Up</span>
                         </div>
                         <a href="#">View <strong>Push Settings</strong> »</a>
-                    </div>
+                    </section>
                 </section>
             </div>
         </div>

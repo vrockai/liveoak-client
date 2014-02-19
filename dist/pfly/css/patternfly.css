@@ -8711,6 +8711,42 @@ h6 .label {
     padding-left: 0;
   }
 }
+/* Side menu */
+.navbar-vertical ul {
+  list-style: none;
+  padding: 0;
+}
+.navbar-vertical ul li {
+  line-height: 26px;
+  margin-bottom: 6px;
+}
+.navbar-vertical ul li a {
+  color: #4d5258;
+  display: block;
+  font-size: 13px;
+  padding-left: 10px;
+}
+.navbar-vertical ul li a:hover,
+.navbar-vertical ul li a:focus {
+  color: #222222;
+  text-decoration: none;
+}
+.navbar-vertical ul li.active a {
+  background-color: #C7E5F0;
+  border-color: #199dde;
+  border-style: solid;
+  border-width: 1px 0 1px 1px;
+  font-weight: bold;
+}
+.navbar-vertical ul li.active a:after {
+  color: #199dde;
+  content: "";
+  float: right;
+  font-family: "FontAwesome";
+  font-size: 22px;
+  font-weight: lighter;
+  margin-right: 15px;
+}
 .pager li > a,
 .pager li > span {
   background-color: #eeeeee;
